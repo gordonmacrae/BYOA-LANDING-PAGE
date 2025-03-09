@@ -10,6 +10,6 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       layouts: "_layouts"
     },
-    pathPrefix: "/repo-name/"
+    pathPrefix: "/BYOA-Static-Site/"
   };
 }; 

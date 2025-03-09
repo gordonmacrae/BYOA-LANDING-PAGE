@@ -4,7 +4,7 @@
   "description": "A simple website with a blog built using 11ty",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "eleventy --serve --port=3000",
     "build": "eleventy --pathprefix=repo-name"
   },
   "keywords": [],
