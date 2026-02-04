@@ -3,16 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>{{ title }} | AI Side Hustle Guide</title>
+    <meta name="description" content="{{ description or 'Learn how to build passive income streams using AI tools. Free guides, tutorials, and resources to start earning money with artificial intelligence.' }}">
+    <meta name="keywords" content="AI side hustle, passive income, make money with AI, ChatGPT income, AI tools, online business">
+    <meta name="author" content="AI Side Hustle Guide">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }} | AI Side Hustle Guide">
+    <meta property="og:description" content="{{ description or 'Learn how to build passive income streams using AI tools.' }}">
+    <meta property="og:site_name" content="AI Side Hustle Guide">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }} | AI Side Hustle Guide">
+    <meta name="twitter:description" content="{{ description or 'Learn how to build passive income streams using AI tools.' }}">
+
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+    <link rel="canonical" href="{{ page.url | url }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="{{ '/' | url }}">Home</a>
-            <a href="{{ '/blog' | url }}">Blog</a>
-            <a href="{{ '/about' | url }}">About</a>
-            <a href="{{ '/faq' | url }}">FAQ</a>
+        <nav class="nav-container">
+            <a href="{{ '/' | url }}" class="logo">🤖 AI Side Hustle</a>
+            <div class="nav-links">
+                <a href="{{ '/' | url }}">Home</a>
+                <a href="{{ '/tools/' | url }}">AI Tools</a>
+                <a href="{{ '/blog/' | url }}">Blog</a>
+                <a href="{{ '/start/' | url }}">Get Started</a>
+                <a href="{{ '/about/' | url }}">About</a>
+            </div>
+            <button class="mobile-menu" aria-label="Menu">☰</button>
         </nav>
     </header>
 
@@ -21,7 +45,34 @@
     </main>
 
     <footer>
-        <p>&copy; {{ page.date.getFullYear() }} Your Name. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AI Side Hustle Guide</h4>
+                <p>Your roadmap to building passive income with artificial intelligence.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="{{ '/tools/' | url }}">AI Tools</a>
+                <a href="{{ '/blog/' | url }}">Blog</a>
+                <a href="{{ '/start/' | url }}">Get Started</a>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="{{ '/faq/' | url }}">FAQ</a>
+                <a href="{{ '/about/' | url }}">About Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ page.date.getFullYear() }} AI Side Hustle Guide. All rights reserved.</p>
+            <p class="affiliate-disclosure">Disclosure: Some links on this site are affiliate links. We may earn a commission at no extra cost to you.</p>
+        </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu')?.addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
-</html> 
+</html>

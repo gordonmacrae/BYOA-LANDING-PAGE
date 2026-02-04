@@ -1,15 +1,16 @@
 {
-  "name": "landing-page",
+  "name": "ai-side-hustle-guide",
   "version": "1.0.0",
-  "description": "A simple website with a blog built using 11ty",
+  "description": "A passive income website teaching people how to make money with AI tools",
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve --port=3000",
-    "build": "eleventy --pathprefix=repo-name"
+    "build": "eleventy --pathprefix=/BYOA-LANDING-PAGE/",
+    "build:local": "eleventy"
   },
-  "keywords": [],
+  "keywords": ["ai", "side-hustle", "passive-income", "affiliate-marketing"],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1"
   }
